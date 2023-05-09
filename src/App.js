@@ -26,9 +26,9 @@ function App() {
 
   const onButtonClick = () => {
     const transformData = {
-      name: data.name,
-      defaultValue: data.defaultValue,
-      companyId: Number(data.companyId),
+      name: data?.name,
+      defaultValue: data?.defaultValue,
+      companyId: Number(data?.companyId),
     };
     dispatch(createTeamData(transformData));
     setData({
@@ -50,17 +50,19 @@ function App() {
     <div className="App">
       <h1>Frontend Interview Redux toolkit</h1>
       <div className="container">
-        <label>Name</label>
-        <input
-          type="text"
-          className="text-box"
-          value={data?.name}
-          name="name"
-          onChange={onChange}
-        />
+        <label>
+          Name:
+          <input
+            type="text"
+            className="text-box"
+            value={data?.name}
+            name="name"
+            onChange={onChange}
+          />
+        </label>
         <div className="radio-button-container">
-          <label>Default value</label>
-          <div className="radio-button">
+          <label>
+            Default value
             <input
               type="radio"
               value={true}
@@ -68,22 +70,19 @@ function App() {
               name="defaultValue"
               onChange={onChange}
             />
-            <label>Default value </label>
-          </div>
+          </label>
         </div>
 
-        <label>Company Id</label>
-        <input
-          type="number"
-          className="text-box"
-          value={data?.companyId || ""}
-          name="companyId"
-          onChange={onChange}
-        />
-        {/* <div>
-        <label>Stages</label>
-        <input type="checkbox" className='text-box' checked={data?.stages} name="stages" onChange={onChange} />
-        </div> */}
+        <label>
+          Company Id:
+          <input
+            type="number"
+            className="text-box"
+            value={data?.companyId || ""}
+            name="companyId"
+            onChange={onChange}
+          />
+        </label>
         <button className="submit-button" onClick={onButtonClick}>
           Submit
         </button>
@@ -91,7 +90,7 @@ function App() {
       <div className="show-contaner">
         <h1>Show Data from API</h1>
         <div className="data-container">
-          <table>
+          <table id="customers">
             <thead>
               <tr>
                 <th className="thdata">Name</th>

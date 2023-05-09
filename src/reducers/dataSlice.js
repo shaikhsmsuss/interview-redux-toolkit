@@ -36,7 +36,7 @@ export const createTeamData = createAsyncThunk(
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      thunkAPI.dispatch(fetchTeamData());
+      await thunkAPI.dispatch(fetchTeamData());
       return res?.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error?.response?.data);
@@ -54,7 +54,7 @@ export const deleteTeamData = createAsyncThunk(
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      thunkAPI.dispatch(fetchTeamData());
+      await thunkAPI.dispatch(fetchTeamData());
       return res?.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error?.response?.data);
