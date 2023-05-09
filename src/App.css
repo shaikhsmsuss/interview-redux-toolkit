@@ -1,0 +1,50 @@
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-right: 200px;
+  margin-bottom: 50px;
+}
+
+.App{
+  margin-left: 50px;
+}
+
+.submit-button{
+  margin-top: 20px;
+  width: 80px;
+  margin-left: 30px;
+}
+
+
+
+.text-box{
+  width: 200px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.show-contaner{
+  width: 600px;
+ 
+}
+
+.data-container{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  
+}
+.item {
+  margin-right: 40px;
+}
+
+.radio-button-container{
+  margin-bottom: 20px;
+}
+
+.thdata{
+  padding-right: 40px;
+}
